@@ -1,0 +1,213 @@
+﻿:root {
+  --ink: #102a43;
+  --ink-soft: #486581;
+  --night: #0b1726;
+  --card: #ffffff;
+  --mist: #f2f7fb;
+  --line: #cad9e8;
+  --primary: #006d77;
+  --primary-2: #1f8a70;
+  --accent: #ffb703;
+  --shadow: 0 10px 24px rgba(16, 42, 67, 0.12);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: rgba(11, 23, 38, 0.95);
+}
+
+.nav {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: #d8e7f7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-btn {
+  display: none;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #8fb5d8;
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+}
+
+.hero {
+  padding: 5rem 0 4rem;
+  color: #ecf4ff;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255, 183, 3, 0.22), transparent 35%),
+    radial-gradient(circle at 88% 24%, rgba(31, 138, 112, 0.3), transparent 42%),
+    linear-gradient(130deg, #0b1726, #12304b);
+}
+
+.hero-grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: 1.6fr 1fr;
+  align-items: center;
+}
+
+.tag {
+  color: #ffcf5f;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+}
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.02em;
+  margin-top: 0;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.15; }
+
+.lead { max-width: 62ch; }
+
+.hero-panel {
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary { background: var(--accent); color: #1c2734; }
+.btn-ghost { background: transparent; color: #dbedff; border: 1px solid #98bfe4; }
+
+.section { padding: 4rem 0; }
+.panel { background: var(--mist); }
+
+.grid { display: grid; gap: 1rem; }
+.grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.contact-form {
+  max-width: 760px;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.7rem;
+  font: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #8bb9dd;
+  border-color: #8bb9dd;
+}
+
+.status {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.footer {
+  background: var(--night);
+  color: #c5d9ef;
+}
+
+.foot {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 980px) {
+  .hero-grid, .grid.four, .grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .menu-btn { display: inline-block; }
+  .nav-menu {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    background: #0b1726;
+    padding: 1rem 4%;
+  }
+  .nav-menu.open { display: flex; }
+  .hero-grid, .grid.four, .grid.three, .grid.two { grid-template-columns: 1fr; }
+  .foot { flex-direction: column; justify-content: center; padding: 1rem 0; text-align: center; }
+}

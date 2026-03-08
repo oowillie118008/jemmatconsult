@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jemmat Consult | Private Investigation & Security Advisory</title>
+  <meta name="description" content="Jemmat Consult offers private investigation and security advisory services for individuals, legal teams, and organizations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#" class="logo">Jemmat Consult</a>
+      <button id="menuBtn" class="menu-btn" aria-label="Open Menu">Menu</button>
+      <ul id="navMenu" class="nav-menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#cases">Case Focus</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="tag">Confidential Intelligence. Strategic Protection.</p>
+          <h1>Private Investigation and Security Advisory You Can Rely On</h1>
+          <p class="lead">
+            Jemmat Consult supports private clients, law firms, and businesses with discreet investigations,
+            risk assessments, and evidence-driven reporting.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Book Confidential Consultation</a>
+            <a href="#services" class="btn btn-ghost">Explore Services</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <h2>Available Support</h2>
+          <ul>
+            <li>Background and due diligence checks</li>
+            <li>Fraud review and asset tracing</li>
+            <li>Surveillance and intelligence gathering</li>
+            <li>Executive and organizational risk advisory</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services" class="section container">
+      <h2>Our Services</h2>
+      <div class="grid four">
+        <article class="card">
+          <h3>Private Investigation</h3>
+          <p>Fact-finding investigations for family, legal, and personal security concerns.</p>
+        </article>
+        <article class="card">
+          <h3>Corporate Intelligence</h3>
+          <p>Pre-employment, vendor, and partner due diligence to reduce business exposure.</p>
+        </article>
+        <article class="card">
+          <h3>Fraud Detection</h3>
+          <p>Investigation into suspicious activity, internal loss, and document inconsistencies.</p>
+        </article>
+        <article class="card">
+          <h3>Security Advisory</h3>
+          <p>Risk mapping and practical recommendations for people, assets, and operations.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="why-us" class="section panel">
+      <div class="container">
+        <h2>Why Jemmat Consult</h2>
+        <div class="grid three">
+          <article class="card">
+            <h3>Discreet Operations</h3>
+            <p>Every case is handled confidentially with strict privacy controls.</p>
+          </article>
+          <article class="card">
+            <h3>Evidence Quality</h3>
+            <p>Reports are clear, structured, and prepared for legal and business decisions.</p>
+          </article>
+          <article class="card">
+            <h3>Rapid Response</h3>
+            <p>Urgent matters are triaged quickly for immediate protective action.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="section container">
+      <h2>Case Focus Areas</h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>Domestic & Personal Cases</h3>
+          <p>Missing person support, relationship verification, and personal threat assessments.</p>
+        </article>
+        <article class="card">
+          <h3>Legal & Commercial Cases</h3>
+          <p>Litigation support, insurance investigations, compliance checks, and dispute intelligence.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Request Confidential Consultation</h2>
+      <form id="consultForm" class="contact-form" novalidate>
+        <label>Full Name<input type="text" name="name" required /></label>
+        <label>Email<input type="email" name="email" required /></label>
+        <label>Phone<input type="tel" name="phone" /></label>
+        <label>Service Required
+          <select name="service" required>
+            <option value="">Select service</option>
+            <option>Private Investigation</option>
+            <option>Corporate Intelligence</option>
+            <option>Fraud Detection</option>
+            <option>Security Advisory</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" rows="5" required></textarea></label>
+        <button type="submit" class="btn btn-primary">Send Request</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <p>&copy; <span id="year"></span> Jemmat Consult. All rights reserved.</p>
+      <p>Private Investigation & Security Advisory</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
